@@ -3,7 +3,7 @@
 ## Introduction
 The K-Nearest Neighbors (KNN) algorithm is one of the simplest yet powerful machine learning algorithms used for both classification and regression tasks. It belongs to the family of instance-based, non-parametric learning methods and is based on the principle that similar objects exist in close proximity.
 
-![KNN Visualization](../images/knn.png)
+![KNN Visualization](/images/knn.png)
 
 ## Fundamental Concept
 The core idea behind KNN is remarkably intuitive: objects that are "similar" tend to belong to the same category. In the context of the algorithm:
