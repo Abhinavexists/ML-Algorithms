@@ -13,6 +13,7 @@ Support Vector Machines (SVMs) are powerful supervised learning models used for 
 The fundamental idea behind SVMs is to find the optimal hyperplane that separates data points of different classes while maximizing the margin between the closest points (support vectors) and the hyperplane.
 
 For a binary classification problem:
+
 - The hyperplane is defined as: $w^T x + b = 0$
 - Points on one side satisfy: $w^T x + b > 0$ (classified as +1)
 - Points on the other side satisfy: $w^T x + b < 0$ (classified as -1)
@@ -31,6 +32,7 @@ Minimize: $\frac{1}{2}||w||^2$
 Subject to: $y_i(w^T x_i + b) \geq 1$ for all $i$
 
 Where:
+
 - $w$ is the normal vector to the hyperplane
 - $b$ is the bias term
 - $x_i$ are the training samples
@@ -81,31 +83,37 @@ Our implementation demonstrates practical applications of SVM with different ker
 Based on our implementation, we observed the following performance metrics:
 
 **RBF Kernel Performance**:
+
 - Overall Accuracy: 92%
 - Class 0: Precision 86%, Recall 99%
 - Class 1: Precision 99%, Recall 84%
 - Confusion Matrix:
-  ```
+
+  ```bash
   [[123   1]
    [ 20 106]]
   ```
 
 **Polynomial Kernel Performance**:
+
 - Overall Accuracy: 90%
 - Class 0: Precision 86%, Recall 95%
 - Class 1: Precision 95%, Recall 85%
 - Confusion Matrix:
-  ```
+
+  ```bash
   [[118   6]
    [ 19 107]]
   ```
 
 **Sigmoid Kernel Performance**:
+
 - Overall Accuracy: 90%
 - Class 0: Precision 85%, Recall 96%
 - Class 1: Precision 95%, Recall 83%
 - Confusion Matrix:
-  ```
+
+  ```bash
   [[119   5]
    [ 21 105]]
   ```
@@ -119,6 +127,7 @@ Our implementation followed these steps:
    - Split data into training (75%) and testing (25%) sets using `train_test_split`
 
 2. **Model Configuration**:
+
    ```python
    # For RBF kernel
    svc = SVC(kernel='rbf')
@@ -131,11 +140,13 @@ Our implementation followed these steps:
    ```
 
 3. **Model Training**:
+
    ```python
    model.fit(x_train, y_train)
    ```
 
 4. **Prediction and Evaluation**:
+
    ```python
    y_pred = model.predict(x_test)
    print(classification_report(y_test, y_pred))
@@ -155,7 +166,8 @@ Our implementation followed these steps:
    - Polynomial: Good balance but may overfit with higher degrees
    - Sigmoid: Similar performance to polynomial but different characteristics at the decision boundary
 
-3. **Hyperparameter Sensitivity**: 
+3. **Hyperparameter Sensitivity**:
+
    - The performance of SVM models, especially with RBF kernel, is highly sensitive to the choice of C and gamma
    - Too high gamma can lead to overfitting, while too low can lead to underfitting
    - Cross-validation is crucial for finding optimal parameters
@@ -173,6 +185,7 @@ These implementation details demonstrate how SVM can be effectively applied to c
 ## Applications
 
 SVMs are widely used in:
+
 - **Text and Hypertext Categorization**: Due to their effectiveness with high-dimensional data.
 - **Image Classification**: For recognizing handwritten characters, faces, etc.
 - **Bioinformatics**: For protein classification and cancer classification.
@@ -197,6 +210,7 @@ SVMs are inherently binary classifiers. For multi-class problems, two common app
 ## Relationship to Other Algorithms
 
 SVMs share similarities with:
+
 - **Logistic Regression**: Both are linear classifiers, but SVMs focus on the margin.
 - **Neural Networks**: Both can learn complex non-linear decision boundaries, but SVMs have stronger theoretical guarantees.
 - **Decision Trees**: Both can handle non-linear data, but SVMs often generalize better.
