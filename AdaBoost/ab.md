@@ -33,6 +33,7 @@ AdaBoost (Adaptive Boosting) is a powerful ensemble learning technique that comb
 ## AdaBoost in This Project
 
 ### 1. AdaBoost Classifier: Holiday Package Prediction
+
 - **Problem**: Predict whether a customer will purchase a holiday package based on demographic and behavioral data.
 - **Data**: 4888 samples, 20 features (after cleaning and feature engineering).
 - **Preprocessing**:
@@ -55,6 +56,7 @@ AdaBoost (Adaptive Boosting) is a powerful ensemble learning technique that comb
 - **Hyperparameter Tuning**: Grid/random search for `n_estimators` and `algorithm` (SAMME, SAMME.R)
 
 ### 2. AdaBoost Regressor: Used Car Price Prediction
+
 - **Problem**: Predict the selling price of used cars based on features like model, year, fuel type, etc.
 - **Data**: 15,411 samples, 13 features (after cleaning and encoding).
 - **Preprocessing**:
