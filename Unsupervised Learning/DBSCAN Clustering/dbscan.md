@@ -4,7 +4,7 @@
 
 DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm that groups together points that are closely packed while marking points that lie alone in low-density regions as outliers. Unlike K-Means and Hierarchical Clustering, DBSCAN doesn't require specifying the number of clusters beforehand and excels at handling noise and non-linear cluster shapes.
 
-![DBSCAN Clustering Visualization](../../images/dbscan.png)
+![DBSCAN Clustering Visualization](/images/dbscan.png)
 
 ---
 
