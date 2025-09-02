@@ -4,7 +4,7 @@
 
 Gradient Boosting is a powerful ensemble learning technique that builds models sequentially, where each new model corrects the errors made by the previous models. It combines weak learners (typically decision trees) to create a strong predictive model.
 
-![Gradient Boosting Visualization](../images/gb.png)
+![Gradient Boosting Visualization](/images/gb.png)
 
 ## Fundamental Concepts
 

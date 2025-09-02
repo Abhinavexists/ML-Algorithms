@@ -4,7 +4,7 @@
 
 They work by creating a model that predicts the value/class of a target variable by learning simple decision rules inferred from the data features.
 
-![Decision Tree Visualization](../images/dt.png)
+![Decision Tree Visualization](/images/dt.png)
 
 ## Fundamental Concepts
 

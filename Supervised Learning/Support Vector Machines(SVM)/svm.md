@@ -4,7 +4,7 @@
 
 Support Vector Machines (SVMs) are powerful supervised learning models used for classification, regression, and outlier detection.
 
-![SVM Visualization](../images/svm.png)
+![SVM Visualization](/images/svm.png)
 
 ## Core Concepts
 

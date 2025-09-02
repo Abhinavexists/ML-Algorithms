@@ -4,7 +4,7 @@
 
 AdaBoost (Adaptive Boosting) is a powerful ensemble learning technique that combines multiple weak learners to form a strong classifier or regressor.
 
-![AdaBoost Visualization](../images/ab.png)
+![AdaBoost Visualization](/images/ab.png)
 
 ---
 

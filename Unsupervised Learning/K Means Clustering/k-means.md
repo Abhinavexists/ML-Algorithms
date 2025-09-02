@@ -4,7 +4,7 @@
 
 It works by iteratively assigning data points to the nearest cluster centroid and then updating the centroids based on the mean of all points in each cluster.
 
-![K-Means Clustering Visualization](../../images/k-means.png)
+![K-Means Clustering Visualization](/images/k-means.png)
 
 ---
 

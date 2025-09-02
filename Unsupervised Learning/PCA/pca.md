@@ -4,7 +4,7 @@
 
 Principal Component Analysis (PCA) is an unsupervised dimensionality reduction technique that transforms a high-dimensional dataset into a lower-dimensional space while preserving as much variance as possible. It helps mitigate the curse of dimensionality, improves model performance, speeds up training, and aids visualization.
 
-![PCA Overview](../../images/pca.png)
+![PCA Overview](/images/pca.png)
 
 ## Core Concepts
 

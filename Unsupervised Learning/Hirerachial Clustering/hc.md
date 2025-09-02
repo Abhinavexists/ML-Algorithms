@@ -4,7 +4,7 @@
 
 Hierarchical Clustering is an unsupervised learning algorithm that builds a hierarchy of clusters by either merging smaller clusters into larger ones (agglomerative) or dividing larger clusters into smaller ones (divisive). Unlike K-Means, it doesn't require specifying the number of clusters beforehand and creates a tree-like structure called a dendrogram.
 
-![Hierarchical Clustering Visualization](../../images/hc.png)
+![Hierarchical Clustering Visualization](/images/hc.png)
 
 ---
 
