@@ -29,7 +29,7 @@ class LinearRegression:
         db = (-2/n)*np.sum((y-y_pred))
 
         self.m = self.m - self.learning_rate*dm
-        self.b = self.b = self.learning_rate*db
+        self.b = self.b - self.learning_rate*db
 
     def train(self, x: np.ndarray, y: np.ndarray, epochs: int = 100):
         for i in range(epochs):
