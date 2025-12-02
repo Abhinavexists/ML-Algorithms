@@ -19,7 +19,7 @@ class LogisticRegression:
     
     def loss_function(self, y: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
         n: int = len(y)
-        # 1e-9 added to avoid logrithm of zero
+        # 1e-9 added to avoid logarithm of zero
         binary_cross_entropy = (-1/n)*np.sum((y*np.log(y_pred + 1e-9))+((1-y)*np.log(1-y_pred + 1e-9)))
         return binary_cross_entropy
     

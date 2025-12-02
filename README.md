@@ -37,7 +37,7 @@ This repository contains implementations of various machine learning algorithms,
 | Algorithm | Description |
 |-----------|-------------|
 | [**DBSCAN**](Unsupervised%20Learning/DBSCAN%20Clustering/dbscan.md) | Density-based spatial clustering for arbitrary shapes |
-| [**Hierarchical Clustering**](Unsupervised%20Learning/Hirerachial%20Clustering/hc.md) | Tree-based clustering with dendrograms |
+| [**Hierarchical Clustering**](Unsupervised%20Learning/Hierarchical%20Clustering/hc.md) | Tree-based clustering with dendrograms |
 | [**K-Means**](Unsupervised%20Learning/K%20Means%20Clustering/k-means.md) | Centroid-based clustering for spherical clusters |
 
 #### Dimensionality Reduction
@@ -51,8 +51,8 @@ This repository contains implementations of various machine learning algorithms,
 | Algorithm | Description |
 |-----------|-------------|
 | [**Isolation Forest**](Unsupervised%20Learning/Anomaly%20Detection/Isolation%20Forest/if.md) | Tree-based anomaly detection |
-| [**Local Outlier Factor**](Unsupervised%20Learning/Anomaly%20Detection/Local%20Outlier%20Anamoly/lof.md) | Density-based anomaly detection |
-| [**DBSCAN for Anomaly Detection**](Unsupervised%20Learning/Anomaly%20Detection/DBSCAN%20Anamoly%20Detection/dbs_anamoly.md) | Density-based outlier identification |
+| [**Local Outlier Factor**](Unsupervised%20Learning/Anomaly%20Detection/Local%20Outlier%20Anomaly/lof.md) | Density-based anomaly detection |
+| [**DBSCAN for Anomaly Detection**](Unsupervised%20Learning/Anomaly%20Detection/DBSCAN%20Anomaly%20Detection/dbs_anomaly.md) | Density-based outlier identification |
 
 ## Quick Start
 
@@ -88,7 +88,7 @@ ML-Algorithms/
 ├── Unsupervised Learning/
 │   ├── Anomaly Detection/
 │   ├── DBSCAN Clustering/
-│   ├── Hirerachial Clustering/
+│   ├── Hierarchical Clustering/
 │   ├── K Means Clustering/
 │   └── PCA/
 ├── images/                 # Algorithm visualizations

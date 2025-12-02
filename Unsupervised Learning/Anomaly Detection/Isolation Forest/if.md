@@ -193,6 +193,6 @@ scores = isolation_forest.decision_function(X_scaled)
 # Results
 n_anomalies = np.sum(labels == -1)
 print(f"Detected {n_anomalies} anomalies out of {len(X)} points")
-print(".1f")
+print(f"Anomaly percentage: {100 * n_anomalies / len(X):.1f}%")
 print(f"Average anomaly score: {np.mean(scores):.3f}")
 ```
