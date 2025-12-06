@@ -8,9 +8,9 @@ Logistic Regression models the probability of a binary (or multiclass) outcome u
 
 ## Core Concepts
 
-- **Decision function**: \( z = w_0 + \sum_{j=1}^{p} w_j x_j \)
-- **Sigmoid (binary)**: \( \sigma(z) = \frac{1}{1 + e^{-z}} \), models \( P(y=1\mid x) = \sigma(z) \)
-- **Softmax (multiclass)**: \( P(y=k\mid x) = \frac{e^{z_k}}{\sum_{c} e^{z_c}} \)
+- **Decision function**: $z = w_0 + \sum_{j=1}^{p} w_j x_j$
+- **Sigmoid (binary)**: $\sigma(z) = \frac{1}{1 + e^{-z}}$, models $P(y=1\mid x) = \sigma(z)$
+- **Softmax (multiclass)**: $P(y=k\mid x) = \frac{e^{z_k}}{\sum_{c} e^{z_c}}$
 - **Loss**: Negative log-likelihood (log-loss / cross-entropy)
 - **Regularization**: L2 (Ridge), L1 (Lasso), Elastic-Net to prevent overfitting
 
@@ -21,24 +21,30 @@ Logistic Regression models the probability of a binary (or multiclass) outcome u
 ### Binary Logistic Regression
 
 Probability of the positive class:
-\[ P(y=1\mid x) = \sigma(\mathbf{w}^T\mathbf{x}) = \frac{1}{1+e^{-\mathbf{w}^T\mathbf{x}}} \]
 
-Log-loss for a dataset \((x_i, y_i)\):
-\[ \mathcal{L}(\mathbf{w}) = -\sum_{i=1}^n \big[ y_i \log \hat{p}_i + (1-y_i) \log (1-\hat{p}_i) \big] \quad \text{where } \hat{p}_i = \sigma(\mathbf{w}^T x_i) \]
+$$P(y=1\mid x) = \sigma(\mathbf{w}^T\mathbf{x}) = \frac{1}{1+e^{-\mathbf{w}^T\mathbf{x}}}$$
+
+Log-loss for a dataset $(x_i, y_i)$:
+
+$$\mathcal{L}(\mathbf{w}) = -\sum_{i=1}^n \big[ y_i \log \hat{p}_i + (1-y_i) \log (1-\hat{p}_i) \big] \quad \text{where } \hat{p}_i = \sigma(\mathbf{w}^T x_i)$$
 
 Regularized objective (L2):
-\[ J(\mathbf{w}) = \mathcal{L}(\mathbf{w}) + \lambda \|\mathbf{w}\|_2^2 \]
+
+$$J(\mathbf{w}) = \mathcal{L}(\mathbf{w}) + \lambda \|\mathbf{w}\|_2^2$$
 
 Gradient:
-\[ \nabla J(\mathbf{w}) = X^T(\hat{\mathbf{p}} - \mathbf{y}) + 2\lambda \mathbf{w} \]
+
+$$\nabla J(\mathbf{w}) = X^T(\hat{\mathbf{p}} - \mathbf{y}) + 2\lambda \mathbf{w}$$
 
 ### Multiclass (Softmax Regression)
 
-For classes \(k=1,\ldots,K\):
-\[ P(y=k\mid x) = \frac{e^{\mathbf{w}_k^T x}}{\sum_{c=1}^K e^{\mathbf{w}_c^T x}} \]
+For classes $k=1,\ldots,K$:
+
+$$P(y=k\mid x) = \frac{e^{\mathbf{w}_k^T x}}{\sum_{c=1}^K e^{\mathbf{w}_c^T x}}$$
 
 Cross-entropy loss:
-\[ \mathcal{L}(W) = - \sum_{i=1}^n \sum_{k=1}^K \mathbb{1}\{y_i=k\} \log P(y_i=k\mid x_i) \]
+
+$$\mathcal{L}(W) = - \sum_{i=1}^n \sum_{k=1}^K \mathbb{1}\{y_i=k\} \log P(y_i=k\mid x_i)$$
 
 ---
 

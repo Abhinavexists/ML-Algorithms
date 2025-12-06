@@ -4,15 +4,13 @@
 
 Linear Regression models the relationship between a scalar target variable and one or more explanatory variables by fitting a linear function. It is foundational for regression tasks and serves as a strong baseline for many real-world problems.
 
-![Linear Regression](../../images/gb.png)
-
 ---
 
 ## Core Concepts
 
-- **Simple Linear Regression**: One feature, line fit: \( y = w_0 + w_1 x \)
-- **Multiple Linear Regression**: Multiple features: \( y = w_0 + \sum_{j=1}^{p} w_j x_j \)
-- **Polynomial Regression**: Linear in parameters after feature expansion (e.g., degree-2: add \(x^2\), interactions)
+- **Simple Linear Regression**: One feature, line fit: $y = w_0 + w_1 x$
+- **Multiple Linear Regression**: Multiple features: $y = w_0 + \sum_{j=1}^{p} w_j x_j$
+- **Polynomial Regression**: Linear in parameters after feature expansion (e.g., degree-2: add $x^2$, interactions)
 - **Regularized Regression**: Ridge (L2), Lasso (L1) to control overfitting
 
 ---
@@ -22,24 +20,31 @@ Linear Regression models the relationship between a scalar target variable and o
 ### Objective (Ordinary Least Squares)
 
 Minimize Residual Sum of Squares (RSS):
-\[ \min_\mathbf{w} \; J(\mathbf{w}) = \| \mathbf{y} - X\mathbf{w} \|_2^2 \]
+
+$$\min_\mathbf{w} \; J(\mathbf{w}) = \| \mathbf{y} - X\mathbf{w} \|_2^2$$
+
 Where:
 
-- \( X \in \mathbb{R}^{n\times p} \) is the design matrix (include a column of ones for intercept)
-- \( \mathbf{y} \in \mathbb{R}^{n} \) is the target vector
-- \( \mathbf{w} \in \mathbb{R}^{p} \) are coefficients (including intercept if not separated)
+- $X \in \mathbb{R}^{n\times p}$ is the design matrix (include a column of ones for intercept)
+- $\mathbf{y} \in \mathbb{R}^{n}$ is the target vector
+- $\mathbf{w} \in \mathbb{R}^{p}$ are coefficients (including intercept if not separated)
 
 ### Closed-Form (Normal Equation)
 
-If \(X^T X\) is invertible:
-\[ \hat{\mathbf{w}} = (X^T X)^{-1} X^T \mathbf{y} \]
-With L2 regularization (Ridge) and regularization strength \(\lambda\):
-\[ \hat{\mathbf{w}} = (X^T X + \lambda I)^{-1} X^T \mathbf{y} \]
+If $X^T X$ is invertible:
+
+$$\hat{\mathbf{w}} = (X^T X)^{-1} X^T \mathbf{y}$$
+
+With L2 regularization (Ridge) and regularization strength $\lambda$:
+
+$$\hat{\mathbf{w}} = (X^T X + \lambda I)^{-1} X^T \mathbf{y}$$
 
 ### Gradient Descent (iterative)
 
-Update rule with learning rate \(\eta\):
-\[ \mathbf{w} \leftarrow \mathbf{w} - \eta \; \nabla J(\mathbf{w}) \quad \text{where} \quad \nabla J(\mathbf{w}) = -2 X^T (\mathbf{y} - X\mathbf{w}) \]
+Update rule with learning rate $\eta$:
+
+$$\mathbf{w} \leftarrow \mathbf{w} - \eta \; \nabla J(\mathbf{w}) \quad \text{where} \quad \nabla J(\mathbf{w}) = -2 X^T (\mathbf{y} - X\mathbf{w})$$
+
 Variants: Batch GD, Stochastic GD (SGD), Mini-batch GD.
 
 ### Assumptions (OLS)
